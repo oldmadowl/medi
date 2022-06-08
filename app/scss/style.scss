@@ -397,4 +397,78 @@
 }
 //END SERVICES
 
+
+//START FOOTER
+.footer{
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+  }
+  &__info{
+    display: grid;
+    grid-template-columns: repeat(3, 160px);
+    row-gap: 30px;
+    column-gap: 190px;
+    max-width: 856px;
+  }
+  &__col-title{
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 35px;
+    font-weight: 700;
+  }
+  &__list-item + &__list-item{
+    margin-top: 15px;
+  }
+  &__contacts{
+    margin-right: 65px;
+  }
+  &__contacts-item + &__contacts-item{
+    margin-top: 30px;
+  }
+  &__contacts-title{
+    color: rgba(0, 0, 0, .5);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 11px;
+    line-height: 17px;
+    margin-bottom: 10px;
+  }
+  &__contacts-info{
+    font-size: 21px;
+    line-height: 32px;
+    font-weight: 700;
+  }
+  &__contacts-btn{
+    @include btn($background: $dark-green);
+    padding: 15px 25px;
+    margin-top: 15px;
+    text-transform: uppercase;
+  }
+  &__bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-left: 1px solid $border-color;
+    border-top: 1px solid $border-color;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  &__copy{
+    margin-left: 25px;
+    flex-basis: 300px;
+    font-weight: 400;
+  }
+  &__politics{
+    text-decoration: underline;
+    margin: 0 70px;
+  }
+  .special-version__link{
+    font-size: 14px;
+  }
+}
+//END FOOTER
+
+
 @import 'media';

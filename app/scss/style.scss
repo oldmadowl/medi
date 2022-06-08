@@ -59,6 +59,7 @@
   }
   &__list{
     position: absolute;
+    z-index: 5;
     top: 100%;
     left: -1px;
     right: -.5px;
@@ -93,5 +94,94 @@
 }
 // END HEADER
 
+
+//START OFFER
+.offer{
+  background-color: $green;
+  color: #fff;
+  &__top-line{
+    display: flex;
+    align-items: center;
+    padding: 24px 0;
+  }
+  &__btn{
+    padding: 10px 15px;
+    color: #000;
+    background-color: #fff;
+    font-size: 18px;
+    margin-left: auto;
+    margin-right: 10px;
+  }
+  .slick-arrow{
+    position: absolute;
+    z-index: 10;
+    bottom: 60px;
+    left: 370px;
+    border: 1px solid #fff;
+    height: 50px;
+    width: 60px;
+  }
+  .slick-next{
+    left: 430px;
+    border-left: none;
+  }
+}
+.menu{
+  margin-left: 60px;
+  &__item + &__item{
+    margin-left: 65px;
+  }
+  &__link{
+    font-size: 18px;
+  }
+}
+.offer__slider{
+  &-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.offer__img{
+  flex-basis: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+.offer__about{
+  flex-basis: 420px;
+}
+.offer__title{
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 48px;
+  height: 72px;
+}
+.offer__about-text{
+  margin-bottom: 40px;
+}
+.offer__about-link{
+  padding: 15px 25px;
+  background-color: $dark-green;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+.offer__links{
+  display: flex;
+}
+.offer__link{
+  flex-grow: 1;
+  background-color: $dark-green;
+  line-height: 80px;
+  font-size: 21px;
+  height: 80px;
+  text-align: center;
+  &:nth-child(even){
+    background-color: $green;
+  }
+  &--big{
+    flex-grow: 2;
+  }
+}
+//END OFFER
 
 @import 'media';

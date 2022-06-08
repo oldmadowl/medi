@@ -8,7 +8,7 @@ $(function(){
   });
 
 
-  //tabs
+  //tabs in section about
   $('.tabs__link').on('click', function(e) {
     e.preventDefault();
 
@@ -17,6 +17,18 @@ $(function(){
 
     $('.tabs__item').removeClass('tabs__item--active');
     $($(this).attr('href')).addClass('tabs__item--active');
+  });
+
+
+  //tabs in section info
+  $('.info__tabs-link').on('click', function(e) {
+    e.preventDefault();
+
+    $('.info__tabs-link').removeClass('info__tabs-link--active');
+    $(this).addClass('info__tabs-link--active');
+
+    $('.info__tabs-item').removeClass('info__tabs-item--active');
+    $($(this).attr('href')).addClass('info__tabs-item--active');
   });
 
 

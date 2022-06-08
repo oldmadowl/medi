@@ -231,14 +231,16 @@
     height: 230px;
   }
 }
+.tabs__link-wrapper{
+  & +&{
+    margin-top: 15px;
+  } 
+}
 .about__tabs-link{
   display: flex;
   align-items: center;
   color: rgba(0, 0, 0, .4);
   max-width: 230px;
-  & +&{
-    margin-top: 15px;
-  }
 }
 .about__tabs-num{
   margin-right: 20px;
@@ -271,5 +273,69 @@
 
 }
 //END ABOUT
+
+
+//START INFO
+.info{
+  margin-bottom: 100px;
+  .inner{
+    align-items: stretch;
+  }
+  &__tabs-controls{
+    color: #fff;
+    background-color: $green;
+    flex-basis: 526px;
+    flex-shrink: 0;
+  }
+  &__btn{
+    margin: 35px 40px 30px;
+    @include btn($background: $dark-green)
+  }
+  &__tabs-link{
+    display: block;
+    padding: 35px 40px;
+    font-size: 18px;
+    line-height: 27px;
+    width: 100%;
+    transition: all .3s;
+    &--active{
+      background-color: $dark-green;
+    }
+  }
+  &__tabs-item{
+    display: none;
+    &--active{
+      display: block;
+    }
+  }
+  &__tabs-content{
+    padding: 35px 60px;
+    background-color: rgba(0, 134, 138, .1);
+  }
+  &__item-title{
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+  }
+  &__list-item{
+    position: relative;
+    padding-left: 21px;
+    & + &{
+      margin-top: 15px;
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 6px;
+      height: 6px;
+      border-radius: 2px;
+      background-color: $dark-green;
+    }
+  }
+}
+//END INFO
 
 @import 'media';

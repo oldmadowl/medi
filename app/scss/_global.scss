@@ -39,7 +39,60 @@ body, html{
 body{
   display: flex;
   flex-direction: column;
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000;
 }
 main{
   flex-grow: 1;
+}
+.container{
+  max-width: 1330px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.special-version{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 30px;
+  height: 90px;
+  border-left: 1px solid $border-color;
+  &__link{
+    position: relative;
+    padding: 13px 15px 11px 51px;
+    color: #fff;
+    background-color: $dark-green;
+    line-height: 16px;
+    text-transform: uppercase;
+    &::before{
+      content: '';
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 15px;
+      width: 26px;
+      height: 22px;
+      transform: translateY(-50%);
+      background-image: url(../images/icons/eye.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
+.social{
+  display: flex;
+  border-right: 1px solid $border-color;
+  &__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90px;
+    width: 80px;
+    text-align: center;
+    border-left: 1px solid $border-color;
+  }
 }

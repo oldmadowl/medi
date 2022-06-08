@@ -1,3 +1,10 @@
 $green: #4FBFA5;
 $dark-green: #00868A;
 $border-color: #C4C4C4;
+
+@mixin btn($background: $green){
+  padding: 10px 15px;
+  color: #fff;
+  background-color: $background;
+  font-size: 18px;
+}
